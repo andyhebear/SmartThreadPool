@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Threading;
-#if UNITY5
+#if UNITY_5
 using System.Mono;
 #endif
 

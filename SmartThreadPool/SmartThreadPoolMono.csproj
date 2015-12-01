@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventWaitHandle.cs" />
     <Compile Include="SLExt.cs" />
     <Compile Include="Stopwatch.cs" />
     <Compile Include="WorkItem.WorkItemResult.cs" />

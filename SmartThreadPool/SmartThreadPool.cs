@@ -105,7 +105,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-#if UNITY5
+#if UNITY_5
 using Debug=UnityEngine.Debug;
 #endif
 using Amib.Threading.Internal;
