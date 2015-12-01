@@ -1,3 +1,5 @@
+#define _SILVERLIGHT
+#define _MONO
 namespace Amib.Threading
 {
 	#region WorkItemInfo class

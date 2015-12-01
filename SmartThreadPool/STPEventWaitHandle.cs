@@ -1,4 +1,6 @@
-﻿#if !(_WINDOWS_CE)
+﻿#define _SILVERLIGHT
+#define _MONO
+#if !(_WINDOWS_CE)
 
 using System;
 using System.Threading;

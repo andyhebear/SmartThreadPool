@@ -1,3 +1,5 @@
+#define _SILVERLIGHT
+#define _MONO
 using System;
 #if !(_WINDOWS_CE)
 using System.Runtime.Serialization;

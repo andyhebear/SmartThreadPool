@@ -1,3 +1,6 @@
+#define _SILVERLIGHT
+#define _MONO
+using System;
 using System.Collections.Generic;
 
 namespace Amib.Threading.Internal

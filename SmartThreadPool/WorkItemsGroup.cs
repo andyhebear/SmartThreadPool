@@ -1,3 +1,5 @@
+#define _SILVERLIGHT
+#define _MONO
 using System;
 using System.Threading;
 using System.Runtime.CompilerServices;

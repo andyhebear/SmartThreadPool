@@ -95,7 +95,9 @@
 //      - Added option to set MaxStackSize of threads 
 
 #endregion
+#define _SILVERLIGHT
 #define _MONO
+
 using System;
 using System.Security;
 using System.Threading;
@@ -103,7 +105,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+#if UNITY5
 using Debug=UnityEngine.Debug;
+#endif
 using Amib.Threading.Internal;
 namespace Amib.Threading
 {

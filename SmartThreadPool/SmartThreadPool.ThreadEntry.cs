@@ -1,4 +1,5 @@
-﻿
+﻿#define _SILVERLIGHT
+#define _MONO
 using System;
 using Amib.Threading.Internal;
 

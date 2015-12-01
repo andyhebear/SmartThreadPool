@@ -1,4 +1,5 @@
-﻿
+﻿#define _SILVERLIGHT
+#define _MONO
 namespace Amib.Threading.Internal
 {
     /// <summary>

@@ -1,7 +1,10 @@
+#define _SILVERLIGHT
+#define _MONO
+using System;
 using System.Threading;
 
 #if (_WINDOWS_CE)
-using System;
+
 using System.Runtime.InteropServices;
 #endif
 

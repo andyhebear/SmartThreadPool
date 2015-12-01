@@ -1,3 +1,5 @@
+#define _SILVERLIGHT
+#define _MONO
 namespace Amib.Threading.Internal
 {
     internal class CanceledWorkItemsGroup

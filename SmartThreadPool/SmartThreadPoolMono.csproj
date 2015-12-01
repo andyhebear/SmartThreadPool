@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SLExt.cs" />
+    <Compile Include="Stopwatch.cs" />
     <Compile Include="WorkItem.WorkItemResult.cs" />
     <Compile Include="CallerThreadContext.cs" />
     <Compile Include="CanceledWorkItemsGroup.cs" />

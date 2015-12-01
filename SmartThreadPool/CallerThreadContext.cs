@@ -1,4 +1,5 @@
-
+#define _SILVERLIGHT
+#define _MONO
 #if !(_WINDOWS_CE) && !(_SILVERLIGHT) && !(WINDOWS_PHONE)
 
 using System;
@@ -42,14 +43,14 @@ namespace Amib.Threading.Internal
         //    return "HttpContext";
         //}
 
-        #endregion
+#endregion
 
 #region Private fields
 
 		//private HttpContext _httpContext;
 		private LogicalCallContext _callContext;
 
-        #endregion
+#endregion
 
 		/// <summary>
 		/// Constructor
@@ -133,6 +134,6 @@ namespace Amib.Threading.Internal
 		}
 	}
 
-    #endregion
+#endregion
 }
 #endif

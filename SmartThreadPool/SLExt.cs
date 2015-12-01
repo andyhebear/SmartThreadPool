@@ -1,4 +1,6 @@
-﻿#if _SILVERLIGHT
+﻿#define _SILVERLIGHT
+#define _MONO
+#if _SILVERLIGHT
 
 using System.Threading;
 
