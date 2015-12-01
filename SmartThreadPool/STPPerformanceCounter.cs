@@ -329,7 +329,7 @@ namespace Amib.Threading.Internal
 			get {return type;}
 			set {
 				if (!Enum.IsDefined (typeof (PerformanceCounterType), value))
-					throw new Exception ();
+					throw new Exception ("typeof (PerformanceCounterType) not defined");
 				type = value;
 			}
 		}
