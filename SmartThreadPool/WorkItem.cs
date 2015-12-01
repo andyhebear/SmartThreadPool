@@ -362,11 +362,11 @@ namespace Amib.Threading.Internal
 
 #if !(_WINDOWS_CE) && !(_SILVERLIGHT) && !(WINDOWS_PHONE)
             CallerThreadContext ctc = null;
-            if (null != _callerContext)
-            {
-                ctc = CallerThreadContext.Capture(_callerContext.CapturedCallContext, _callerContext.CapturedHttpContext);
-                CallerThreadContext.Apply(_callerContext);
-            }
+            //if (null != _callerContext)
+            //{
+            //    ctc = CallerThreadContext.Capture(_callerContext.CapturedCallContext, _callerContext.CapturedHttpContext);
+            //    CallerThreadContext.Apply(_callerContext);
+            //}
 #endif
 
             Exception exception = null;

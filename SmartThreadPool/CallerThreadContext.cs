@@ -5,7 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
-using System.Web;
+//using System.Web;
 using System.Runtime.Remoting.Messaging;
 
 
@@ -28,25 +28,25 @@ namespace Amib.Threading.Internal
 		private static readonly MethodInfo setLogicalCallContextMethodInfo =
 			typeof(Thread).GetMethod("SetLogicalCallContext", BindingFlags.Instance | BindingFlags.NonPublic);
 
-		private static string HttpContextSlotName = GetHttpContextSlotName();
+		//private static string HttpContextSlotName = GetHttpContextSlotName();
 
-		private static string GetHttpContextSlotName()
-		{
-			FieldInfo fi = typeof(HttpContext).GetField("CallContextSlotName", BindingFlags.Static | BindingFlags.NonPublic);
+        //private static string GetHttpContextSlotName()
+        //{
+        //    FieldInfo fi = typeof(HttpContext).GetField("CallContextSlotName", BindingFlags.Static | BindingFlags.NonPublic);
 
-            if (fi != null)
-            {
-                return (string) fi.GetValue(null);
-            }
+        //    if (fi != null)
+        //    {
+        //        return (string) fi.GetValue(null);
+        //    }
 
-		    return "HttpContext";
-		}
+        //    return "HttpContext";
+        //}
 
         #endregion
 
 #region Private fields
 
-		private HttpContext _httpContext;
+		//private HttpContext _httpContext;
 		private LogicalCallContext _callContext;
 
         #endregion
@@ -66,13 +66,13 @@ namespace Amib.Threading.Internal
 			}
 		}
 
-		public bool CapturedHttpContext
-		{
-			get
-			{
-				return (null != _httpContext);
-			}
-		}
+        //public bool CapturedHttpContext
+        //{
+        //    get
+        //    {
+        //        return (null != _httpContext);
+        //    }
+        //}
 
 		/// <summary>
 		/// Captures the current thread context
@@ -98,10 +98,10 @@ namespace Amib.Threading.Internal
 			}
 
 			// Capture httpContext
-			if (captureHttpContext && (null != HttpContext.Current))
-			{
-				callerThreadContext._httpContext = HttpContext.Current;
-			}
+            //if (captureHttpContext && (null != HttpContext.Current))
+            //{
+            //    callerThreadContext._httpContext = HttpContext.Current;
+            //}
 
 			return callerThreadContext;
 		}
@@ -125,11 +125,11 @@ namespace Amib.Threading.Internal
 			}
 
 			// Restore HttpContext 
-			if (callerThreadContext._httpContext != null)
-			{
-                HttpContext.Current = callerThreadContext._httpContext;
-				//CallContext.SetData(HttpContextSlotName, callerThreadContext._httpContext);
-			}
+            //if (callerThreadContext._httpContext != null)
+            //{
+            //    HttpContext.Current = callerThreadContext._httpContext;
+            //    //CallContext.SetData(HttpContextSlotName, callerThreadContext._httpContext);
+            //}
 		}
 	}
 

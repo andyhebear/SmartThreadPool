@@ -276,7 +276,7 @@ namespace Amib.Threading.Internal
 
         #region QueueWorkItem(Action<...>)
 
-        public IWorkItemResult QueueWorkItem(Action action, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult QueueWorkItem(Action action, WorkItemPriority priority = WorkItemPriority.Normal)/*SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem ();
             WorkItem workItem = WorkItemFactory.CreateWorkItem (
@@ -291,7 +291,7 @@ namespace Amib.Threading.Internal
             return workItem.GetWorkItemResult ();
         }
 
-        public IWorkItemResult QueueWorkItem<T>(Action<T> action, T arg, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult QueueWorkItem<T>(Action<T> action, T arg, WorkItemPriority priority =WorkItemPriority.Normal)/* SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem ();
             WorkItem workItem = WorkItemFactory.CreateWorkItem (
@@ -307,7 +307,7 @@ namespace Amib.Threading.Internal
             return workItem.GetWorkItemResult ();
         }
 
-        public IWorkItemResult QueueWorkItem<T1, T2>(Action<T1, T2> action, T1 arg1, T2 arg2, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult QueueWorkItem<T1, T2>(Action<T1, T2> action, T1 arg1, T2 arg2, WorkItemPriority priority = WorkItemPriority.Normal)/*SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem ();
             WorkItem workItem = WorkItemFactory.CreateWorkItem (
@@ -323,7 +323,7 @@ namespace Amib.Threading.Internal
             return workItem.GetWorkItemResult ();
         }
 
-        public IWorkItemResult QueueWorkItem<T1, T2, T3>(Action<T1, T2, T3> action, T1 arg1, T2 arg2, T3 arg3, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult QueueWorkItem<T1, T2, T3>(Action<T1, T2, T3> action, T1 arg1, T2 arg2, T3 arg3, WorkItemPriority priority =WorkItemPriority.Normal)/* SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem ();
             WorkItem workItem = WorkItemFactory.CreateWorkItem (
@@ -340,7 +340,7 @@ namespace Amib.Threading.Internal
         }
 
         public IWorkItemResult QueueWorkItem<T1, T2, T3, T4> (
-            Action<T1, T2, T3, T4> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+            Action<T1, T2, T3, T4> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, WorkItemPriority priority = WorkItemPriority.Normal)/*SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem ();
             WorkItem workItem = WorkItemFactory.CreateWorkItem (
@@ -360,7 +360,7 @@ namespace Amib.Threading.Internal
 
         #region QueueWorkItem(Func<...>)
 
-        public IWorkItemResult<TResult> QueueWorkItem<TResult>(Func<TResult> func, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult<TResult> QueueWorkItem<TResult>(Func<TResult> func, WorkItemPriority priority =WorkItemPriority.Normal)/* SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem();
             WorkItem workItem = WorkItemFactory.CreateWorkItem(
@@ -374,7 +374,7 @@ namespace Amib.Threading.Internal
             return new WorkItemResultTWrapper<TResult>(workItem.GetWorkItemResult());
         }
 
-        public IWorkItemResult<TResult> QueueWorkItem<T, TResult>(Func<T, TResult> func, T arg, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult<TResult> QueueWorkItem<T, TResult>(Func<T, TResult> func, T arg, WorkItemPriority priority = WorkItemPriority.Normal)/*SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem();
             WorkItem workItem = WorkItemFactory.CreateWorkItem(
@@ -390,7 +390,7 @@ namespace Amib.Threading.Internal
             return new WorkItemResultTWrapper<TResult>(workItem.GetWorkItemResult());
         }
 
-        public IWorkItemResult<TResult> QueueWorkItem<T1, T2, TResult>(Func<T1, T2, TResult> func, T1 arg1, T2 arg2, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+        public IWorkItemResult<TResult> QueueWorkItem<T1, T2, TResult>(Func<T1, T2, TResult> func, T1 arg1, T2 arg2, WorkItemPriority priority =WorkItemPriority.Normal)/* SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem();
             WorkItem workItem = WorkItemFactory.CreateWorkItem(
@@ -407,7 +407,7 @@ namespace Amib.Threading.Internal
         }
 
         public IWorkItemResult<TResult> QueueWorkItem<T1, T2, T3, TResult>(
-            Func<T1, T2, T3, TResult> func, T1 arg1, T2 arg2, T3 arg3, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+            Func<T1, T2, T3, TResult> func, T1 arg1, T2 arg2, T3 arg3, WorkItemPriority priority =WorkItemPriority.Normal)/* SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem();
             WorkItem workItem = WorkItemFactory.CreateWorkItem(
@@ -424,7 +424,7 @@ namespace Amib.Threading.Internal
         }
 
         public IWorkItemResult<TResult> QueueWorkItem<T1, T2, T3, T4, TResult>(
-            Func<T1, T2, T3, T4, TResult> func, T1 arg1, T2 arg2, T3 arg3, T4 arg4, WorkItemPriority priority = SmartThreadPool.DefaultWorkItemPriority)
+            Func<T1, T2, T3, T4, TResult> func, T1 arg1, T2 arg2, T3 arg3, T4 arg4, WorkItemPriority priority = WorkItemPriority.Normal)/*SmartThreadPool.DefaultWorkItemPriority)*/
         {
             PreQueueWorkItem();
             WorkItem workItem = WorkItemFactory.CreateWorkItem(

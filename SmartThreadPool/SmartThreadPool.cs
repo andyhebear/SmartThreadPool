@@ -95,7 +95,7 @@
 //      - Added option to set MaxStackSize of threads 
 
 #endregion
-
+#define _MONO
 using System;
 using System.Security;
 using System.Threading;
@@ -103,9 +103,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-
+using Debug=UnityEngine.Debug;
 using Amib.Threading.Internal;
-
 namespace Amib.Threading
 {
 	#region SmartThreadPool class
@@ -475,7 +474,7 @@ namespace Amib.Threading
                 }
                 catch (Exception e)
                 {
-                    Debug.WriteLine("Unable to create Performance Counters: " + e);
+                    Debug.LogWarning("Unable to create Performance Counters: " + e);
                     _windowsPCs = NullSTPInstancePerformanceCounters.Instance;
                 }
             }
